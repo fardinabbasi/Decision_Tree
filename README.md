@@ -56,5 +56,6 @@ Here are the classification results with max_depth = 3:
 | Confusion Matrix  | Classification Report |
 | --- | --- |
 | <img src="/readme_images/c.png"> | <img src="/readme_images/r.jpg"> |
+
 Additionally, the plot of the decision tree is depicted below.
 <img src="/readme_images/3.png">
