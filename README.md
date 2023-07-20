@@ -34,9 +34,9 @@ When max_depth = 2, the precision on the training data is 85.5%, and on the test
 
 Moreover, the tree mentioned above is much more **interpretable** due to its limited depth and simple structure, making it easier to **understand** and **analyze**.
 ## Hyperparameter Tuning
-To find the optimal value for max_depth, one method is using RandomizedSearchCV, which combines hyperparameter tuning and cross-validation techniques. 
+To find the optimal value for max_depth, one method is using **RandomizedSearchCV**, which combines **hyperparameter tuning** and **cross-validation techniques**. 
 
-This approach involves randomly sampling a set of hyperparameters from specified ranges, evaluating their performance through cross-validation, and ultimately selecting the best set of hyperparameters that yield the highest score.
+This approach involves **randomly** sampling a set of hyperparameters from specified ranges, **evaluating** their performance through **cross-validation**, and ultimately selecting the best set of hyperparameters that yield the **highest score**.
 ```ruby
 from sklearn.model_selection import RandomizedSearchCV
 ```
