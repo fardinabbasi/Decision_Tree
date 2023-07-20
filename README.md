@@ -46,6 +46,8 @@ best_clf = rand_search.best_estimator_
 # Print the best hyperparameters
 print('Best Hyperparameters:',  rand_search.best_params_)
 ```
+*Best Hyperparameters: {'max_depth': 3}*
+
 | Confusion Matrix  | Classification Report |
 | --- | --- |
 | <img src="/readme_images/c.png"> | <img src="/readme_images/r.jpg"> |
