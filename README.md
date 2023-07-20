@@ -21,7 +21,9 @@ clf.fit(X_train,Y_train)
 The **precision** of this model on the **training data** is 100%, but on the **test data**, it drops significantly to 57.9%. This indicates that the model is **overfitting**. 
 Additionally, the tree mentioned above lacks **interpretability**.
 ## max_depth = 2
+In order to prevent the decision tree from overfitting, various pruning methods are employed. **Pre-pruning** involves setting **constraints** on the construction of the decision tree during the training phase to prevent it from becoming too complex and **overfitting** the training data. 
 
+Pre-pruning techniques include **limiting** the maximum depth of the tree, setting a minimum number of samples required to split an internal node, or defining a minimum number of samples required for a leaf node.
 ```ruby
 clf = DecisionTreeClassifier(criterion='entropy',max_depth=2)
 clf.fit(X_train,Y_train)
@@ -32,6 +34,9 @@ When max_depth = 2, the precision on the training data is 85.5%, and on the test
 
 Moreover, the tree mentioned above is much more **interpretable** due to its limited depth and simple structure, making it easier to **understand** and **analyze**.
 ## Hyperparameter Tuning
+To find the optimal value for max_depth, one method is using RandomizedSearchCV, which combines hyperparameter tuning and cross-validation techniques. 
+
+This approach involves randomly sampling a set of hyperparameters from specified ranges, evaluating their performance through cross-validation, and ultimately selecting the best set of hyperparameters that yield the highest score.
 ```ruby
 from sklearn.model_selection import RandomizedSearchCV
 ```
