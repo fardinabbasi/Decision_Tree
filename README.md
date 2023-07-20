@@ -27,6 +27,27 @@ clf = DecisionTreeClassifier(criterion='entropy',max_depth=2)
 clf.fit(X_train,Y_train)
 ```
 <img src="/readme_images/2.png">
+
 When max_depth = 2, the precision on the training data is 85.5%, and on the test data, it is 69.2%. Although the training precision has decreased, the **test precision increased**, indicating an improvement in the model's performance. However, there is still room for further improvement. 
 
 Moreover, the tree mentioned above is much more **interpretable** due to its limited depth and simple structure, making it easier to **understand** and **analyze**.
+## Hyperparameter Tuning
+```ruby
+from sklearn.model_selection import RandomizedSearchCV
+```
+```ruby
+param_dist = {'max_depth': np.arange(1,15,1)}
+clf = DecisionTreeClassifier(criterion='entropy')
+rand_search = RandomizedSearchCV(clf, param_distributions = param_dist, n_iter=5, cv=5)
+rand_search.fit(X_train, Y_train)
+# Create a variable for the best model
+best_clf = rand_search.best_estimator_
+
+# Print the best hyperparameters
+print('Best Hyperparameters:',  rand_search.best_params_)
+```
+| Confusion Matrix  | Classification Report |
+| --- | --- |
+| <img src="/readme_images/c.png"> | <img src="/readme_images/r.jpg"> |
+
+<img src="/readme_images/3.png">
