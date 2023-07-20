@@ -52,10 +52,13 @@ best_clf = rand_search.best_estimator_
 print('Best Hyperparameters:',  rand_search.best_params_)
 ```
 *Best Hyperparameters: {'max_depth': 3}*
+
 Here are the classification results with max_depth = 3:
 | Confusion Matrix  | Classification Report |
 | --- | --- |
 | <img src="/readme_images/c.png"> | <img src="/readme_images/r.jpg"> |
+
+As you can see, the precision score of this model is higher compared to the previous models.
 
 Additionally, the plot of the decision tree is depicted below.
 
